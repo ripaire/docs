@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+    client:
+        container_name: docs
+        image: nginx:stable-alpine
+        restart: always
+        ports:
+            - 8004:80
+        volumes:
+            - /home/ubuntu/docs/_site:/usr/share/nginx/html
